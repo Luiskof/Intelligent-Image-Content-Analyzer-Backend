@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  image-analysis-api:
+    build: .
+    ports:
+      - "8090:8090"
+    environment:
+      - IMAGGA_API_KEY=${IMAGGA_API_KEY}
+      - IMAGGA_API_SECRET=${IMAGGA_API_SECRET}
