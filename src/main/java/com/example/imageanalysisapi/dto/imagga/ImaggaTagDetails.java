@@ -3,14 +3,14 @@ package com.example.imageanalysisapi.dto.imagga;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ImaggaTagDetails {
-    @JsonProperty("en")
-    private String en;
+    @JsonProperty("es")
+    private String es;
 
-    public String getEn() {
-        return en;
+    public String getEs() {
+        return es;
     }
 
-    public void setEn(String en) {
-        this.en = en;
+    public void setEn(String es) {
+        this.es = es;
     }
 }

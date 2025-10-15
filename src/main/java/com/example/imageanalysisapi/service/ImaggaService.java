@@ -33,7 +33,7 @@ public class ImaggaService {
         String encodedCredentials = Base64.getEncoder().encodeToString(credentials.getBytes());
 
         return webClient.post()
-                .uri("/tags")
+                .uri(uriBuilder -> uriBuilder.path("/tags").queryParam("language", "es").build())
                 .header(HttpHeaders.AUTHORIZATION, "Basic " + encodedCredentials)
                 .body(BodyInserters.fromMultipartData("image", file.getResource()))
                 .retrieve()
@@ -47,7 +47,7 @@ public class ImaggaService {
         }
 
         var tags = imaggaResponse.getResult().getTags().stream()
-                .map(imaggaTag -> new Tag(imaggaTag.getTag().getEn(), imaggaTag.getConfidence()))
+                .map(imaggaTag -> new Tag(imaggaTag.getTag().getEs(), imaggaTag.getConfidence()))
                 .toList();
 
         return new AnalysisResponse(tags);
