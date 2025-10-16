@@ -21,15 +21,15 @@ Sigue estos pasos para instalar las dependencias y ejecutar el proyecto en tu m�
 
 - **Java 17** o superior instalado.
 - **Maven** instalado.
-- Una **API Key** y **API Secret** de [Imagga](https://imagga.com/). Puedes obtenerlas creando una cuenta en su sitio web.
+- Una **API Key** y **API Secret** de [Imagga](https://imagga.com/). Puedes obtenerlas creando una cuenta en su sitio web, en la sección User Dashboard.
 
 ### Pasos
 
-1.  **Clona el repositorio** (o descarga el código fuente).
+1.  **Clona el repositorio** (https://github.com/Luiskof/Intelligent-Image-Content-Analyzer-Backend.git).
 
 2.  **Configura las variables de entorno**:
 
-    Esta aplicación requiere la API Key y el API Secret de Imagga para funcionar. La forma recomendada de configurarlas es a través de variables de entorno.
+    Esta aplicación requiere la API Key y el API Secret de Imagga para funcionar. La forma recomendada de configurarlas es a través de variables de entorno del sistema.
 
     En sistemas UNIX (Linux/macOS):
     ```bash
@@ -49,10 +49,8 @@ Sigue estos pasos para instalar las dependencias y ejecutar el proyecto en tu m�
 
     Navega a la raíz del proyecto y utiliza Maven para ejecutar la aplicación:
 
-    ```bash
     mvn spring-boot:run
-    ```
-
+  
 4.  **La API estará disponible** en `http://localhost:8090`.
 
 ## Cómo Usar la API
